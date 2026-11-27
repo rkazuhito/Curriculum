@@ -32,6 +32,7 @@ body {
 
   /*background: color image repeat position/size */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -40,7 +41,8 @@ body * {
 }
 
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 400px;
   margin: 56px auto 0px auto;
   padding: 0 24px;
 }
@@ -115,7 +117,7 @@ ul li a {
   padding: 16px 24px;
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
-  border-radius: 10px;
+  border-radius: 25px;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   text-decoration: none;
@@ -156,4 +158,14 @@ footer {
   text-align: center;
   font-size: 10px;
   padding: 30px 0;
+}
+
+/*media queries*/
+@media (min-widht: 700px) {
+  :rooot {
+    --bg-url: url(assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(assets/bg-desktop-light.jpg);
+  }
 }
